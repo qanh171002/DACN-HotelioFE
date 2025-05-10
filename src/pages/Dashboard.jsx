@@ -10,7 +10,7 @@ import Button from "../components/Button";
 import Stat from "../components/Stat";
 
 import { HiOutlineDownload, HiOutlineLogout } from "react-icons/hi";
-import DurationChart from "./DurationChart";
+import DurationChart from "../components/DurationChart";
 import RoomAvailability from "../components/RoomAvailability";
 
 function Dashboard() {
