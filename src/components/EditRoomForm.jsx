@@ -14,11 +14,9 @@ function EditRoomForm({ room, onSubmit, onClose }) {
     status: room.status || "Available",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null);
     setIsSubmitting(true);
 
     try {
@@ -58,12 +56,6 @@ function EditRoomForm({ room, onSubmit, onClose }) {
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="mb-6 text-xl font-semibold text-gray-800">Edit room</h2>
-
-      {error && (
-        <div className="p-4 mb-4 text-sm text-red-600 rounded-lg bg-red-50">
-          {error}
-        </div>
-      )}
 
       <div className="grid grid-cols-2 gap-8">
         {/* Left Column */}
