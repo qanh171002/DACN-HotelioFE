@@ -66,14 +66,14 @@ function Dashboard() {
 
       {/* Chart section */}
       <DurationChart />
-      <RoomAvailability
+      {/* <RoomAvailability
         data={{
           occupied: 286,
           reserved: 87,
           available: 32,
           notReady: 13,
         }}
-      />
+      /> */}
     </div>
   );
 }

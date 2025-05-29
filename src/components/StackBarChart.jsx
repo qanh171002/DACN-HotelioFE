@@ -5,7 +5,6 @@ import {
   XAxis,
   YAxis,
   ResponsiveContainer,
-  Cell,
 } from "recharts";
 
 const StackBarChart = ({ data }) => {

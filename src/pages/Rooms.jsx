@@ -244,20 +244,18 @@ function RoomCard({ room }) {
   };
   return (
     <div
-      className={`relative flex min-h-[220px] cursor-pointer flex-col justify-between rounded-2xl p-6 text-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-lg ${colors.base} ${colors.hover}`}
+      className={`relative flex min-h-[140px] cursor-pointer flex-col justify-between rounded-2xl p-6 text-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-lg ${colors.base} ${colors.hover}`}
       onClick={() => navigate(`/rooms/${room.id}`)}
     >
-      {/* Tên phòng */}
       <div className="mb-4 text-xl font-bold tracking-wide text-white">
         {roomName}
       </div>
-      {/* Thông tin */}
       <div className="flex flex-col gap-2 mb-14">
         <div className="flex items-center text-base">
           <FaUserFriends className="mr-2 text-gray-100" />
           <span className="text-gray-100">
             For up to <span className="font-semibold">{room.maxOccupancy}</span>{" "}
-            guests
+            {room.maxOccupancy === 1 ? "guest" : "guests"}
           </span>
         </div>
         <div className="flex items-center text-base">
@@ -265,10 +263,9 @@ function RoomCard({ room }) {
           <span className="text-gray-100">{room.roomType}</span>
         </div>
       </div>
-      {/* Giá phòng */}
       <div className="absolute text-2xl font-bold text-white bottom-6 right-6">
         ${room.price}
-        <span className="text-base font-normal text-gray-200">/ night</span>
+        <span className="text-base font-semibold text-gray-200">/ night</span>
       </div>
     </div>
   );

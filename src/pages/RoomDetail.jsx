@@ -72,10 +72,10 @@ export default function RoomDetail() {
 
   const statusColor =
     roomData.status === "Available"
-      ? "bg-blue-100 text-blue-700"
+      ? "bg-blue-100 text-blue-500"
       : roomData.status === "Reserved"
-        ? "bg-green-100 text-green-700"
-        : "bg-red-100 text-red-700";
+        ? "bg-green-100 text-green-500"
+        : "bg-red-100 text-red-500";
 
   const handleEditRoom = (updatedRoom) => {
     setRoomData(updatedRoom);
@@ -118,7 +118,7 @@ export default function RoomDetail() {
                 Room #{roomNumberFormatted}
               </h2>
               <span
-                className={`rounded-full px-4 py-2 text-base font-bold ${statusColor}`}
+                className={`rounded-full px-4 py-2 text-base font-semibold ${statusColor}`}
               >
                 {roomData.status}
               </span>
@@ -140,24 +140,24 @@ export default function RoomDetail() {
             <div className="flex items-center gap-4 mt-10">
               <button
                 onClick={() => navigate(-1)}
-                className="flex items-center gap-2 py-3 text-lg font-bold text-gray-700 transition duration-200 ease-in-out border border-gray-300 rounded-md px-7 hover:bg-gray-100"
+                className="flex items-center gap-2 py-3 text-lg font-semibold text-gray-700 transition duration-200 ease-in-out border border-gray-300 rounded-md px-7 hover:bg-gray-100"
               >
                 <FaArrowLeft />
                 Back
               </button>
               <button
-                className="flex items-center gap-2 py-3 text-lg font-bold text-white transition duration-200 ease-in-out bg-blue-500 rounded-md px-7 hover:bg-blue-600"
+                className="flex items-center gap-2 py-3 text-lg font-semibold text-white transition duration-200 ease-in-out bg-blue-500 rounded-md px-7 hover:bg-blue-600"
                 onClick={() => setIsEditOpen(true)}
               >
                 <FaEdit />
-                Edit Room
+                Edit
               </button>
               <button
-                className="flex items-center gap-2 py-3 text-lg font-bold text-white transition duration-200 ease-in-out bg-red-500 rounded-md px-7 hover:bg-red-600"
+                className="flex items-center gap-2 py-3 text-lg font-semibold text-white transition duration-200 ease-in-out bg-red-500 rounded-md text-md px-7 hover:bg-red-600"
                 onClick={handleDeleteRoom}
               >
                 <FaTrash />
-                Delete Room
+                Delete
               </button>
             </div>
           </div>
