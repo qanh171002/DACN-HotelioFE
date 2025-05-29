@@ -20,8 +20,8 @@ const RoomAvailability = ({ data }) => {
   ];
 
   return (
-    <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-even">
-      <div className="mb-6 flex items-center justify-between">
+    <div className="w-full max-w-md p-6 bg-white rounded-xl shadow-even">
+      <div className="flex items-center justify-between mb-6">
         <h1 className="text-xl font-semibold">Room Availability</h1>
         <button className="text-gray-400 hover:text-gray-600">⋯</button>
       </div>
@@ -50,9 +50,9 @@ const RoomAvailability = ({ data }) => {
       </ResponsiveContainer>
 
       {/* Details Grid */}
-      <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 text-base">
+      <div className="grid grid-cols-2 mt-6 text-base gap-x-6 gap-y-4">
         <div className="flex items-start gap-2">
-          <div className="h-5 w-1 rounded bg-blue-500" />
+          <div className="w-1 h-5 bg-blue-500 rounded" />
           <div>
             <p className="text-gray-500">Occupied</p>
             <p className="text-lg font-semibold">{data.occupied}</p>
@@ -60,7 +60,7 @@ const RoomAvailability = ({ data }) => {
         </div>
 
         <div className="flex items-start gap-2">
-          <div className="h-5 w-1 rounded bg-blue-300" />
+          <div className="w-1 h-5 bg-blue-300 rounded" />
           <div>
             <p className="text-gray-500">Reserved</p>
             <p className="text-lg font-semibold">{data.reserved}</p>
@@ -68,7 +68,7 @@ const RoomAvailability = ({ data }) => {
         </div>
 
         <div className="flex items-start gap-2">
-          <div className="h-5 w-1 rounded bg-blue-100" />
+          <div className="w-1 h-5 bg-blue-100 rounded" />
           <div>
             <p className="text-gray-500">Available</p>
             <p className="text-lg font-semibold">{data.available}</p>
@@ -76,7 +76,7 @@ const RoomAvailability = ({ data }) => {
         </div>
 
         <div className="flex items-start gap-2">
-          <div className="h-5 w-1 rounded bg-gray-300" />
+          <div className="w-1 h-5 bg-gray-300 rounded" />
           <div>
             <p className="text-gray-500">Not Ready</p>
             <p className="text-lg font-semibold">{data.notReady}</p>

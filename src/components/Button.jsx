@@ -1,6 +1,6 @@
 function Button({ variation = "primary", children, onClick, className }) {
   const baseStyles =
-    "rounded-full px-4 py-2 text-sm font-medium transition duration-200 ease-in-out focus:outline-none";
+    "rounded-md px-4 py-2 text-sm font-medium transition duration-200 ease-in-out focus:outline-none";
 
   const variationStyles = {
     primary: "bg-blue-500 text-white hover:bg-blue-600",

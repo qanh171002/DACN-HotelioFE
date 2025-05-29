@@ -1,32 +1,27 @@
 import {
   HiOutlineCalendar,
-  HiOutlineCog,
   HiOutlineCurrencyDollar,
   HiOutlineHome,
-  HiOutlineShare,
   HiOutlineUser,
 } from "react-icons/hi2";
-import Button from "../components/Button";
 import Stat from "../components/Stat";
 
-import { HiOutlineDownload, HiOutlineLogout } from "react-icons/hi";
+import { HiOutlineLogout } from "react-icons/hi";
 import DurationChart from "../components/DurationChart";
 import RoomAvailability from "../components/RoomAvailability";
 
 function Dashboard() {
   return (
     <div className="grid grid-cols-5 gap-6">
-      {/* Header text (2 cột) */}
       <div className="flex flex-col justify-center col-span-2 mb-6">
-        <h2 className="text-2xl font-semibold text-gray-800">
+        <h2 className="text-2xl font-bold text-gray-800">
           Welcome back, User!
         </h2>
-        <p className="text-sm text-gray-500">
+        <p className="text-gray-500 text-md">
           Here’s a quick overview of your dashboard.
         </p>
       </div>
 
-      {/* Buttons (3 cột) */}
       <div className="flex items-center justify-end col-span-3 gap-4 mb-6">
         <div>Lọc theo ngày</div>
       </div>
