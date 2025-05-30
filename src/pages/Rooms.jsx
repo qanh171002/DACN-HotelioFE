@@ -167,17 +167,17 @@ function Rooms() {
   return (
     <div className="grid grid-cols-5 gap-6">
       {/* Header text (2 cột) */}
-      <div className="flex flex-col justify-center col-span-2 mb-6">
+      <div className="col-span-2 mb-6 flex flex-col justify-center">
         <h2 className="text-2xl font-bold text-gray-800">List of Rooms</h2>
-        <p className="text-gray-500 text-md">
+        <p className="text-md text-gray-500">
           Here is the list of your hotel rooms.
         </p>
       </div>
 
       {/* Filter and button (3 cột) */}
-      <div className="flex items-center justify-end col-span-3 gap-4 mb-6">
+      <div className="col-span-3 mb-6 flex items-center justify-end gap-4">
         <select
-          className="px-3 py-2 text-sm border rounded-md"
+          className="rounded-md border px-3 py-2 text-sm"
           value={selectedFloor}
           onChange={handleFloorChange}
         >
@@ -192,9 +192,9 @@ function Rooms() {
       </div>
 
       {/* Room cards */}
-      <div className="col-span-5 p-6 bg-white rounded-2xl">
+      <div className="col-span-5 rounded-2xl bg-white p-6">
         {isLoading ? (
-          <div className="flex items-center justify-center h-40">
+          <div className="flex h-40 items-center justify-center">
             <Spinner />
           </div>
         ) : filteredRooms.length === 0 ? (
@@ -212,7 +212,7 @@ function Rooms() {
               ))}
             </div>
             {/* Legend */}
-            <div className="flex justify-center gap-6 mt-16">
+            <div className="mt-16 flex justify-center gap-6">
               <LegendItem color="bg-blue-500" label="Available" />
               <LegendItem color="bg-green-500" label="Reserved" />
               <LegendItem color="bg-red-500" label="Booked" />
@@ -244,13 +244,13 @@ function RoomCard({ room }) {
   };
   return (
     <div
-      className={`relative flex min-h-[140px] cursor-pointer flex-col justify-between rounded-2xl p-6 text-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-lg ${colors.base} ${colors.hover}`}
+      className={`relative flex min-h-[140px] cursor-pointer flex-col justify-between rounded-2xl p-4 text-white shadow-md transition duration-300 hover:scale-[1.02] hover:shadow-lg ${colors.base} ${colors.hover}`}
       onClick={() => navigate(`/rooms/${room.id}`)}
     >
       <div className="mb-4 text-xl font-bold tracking-wide text-white">
         {roomName}
       </div>
-      <div className="flex flex-col gap-2 mb-14">
+      <div className="mb-14 flex flex-col gap-2">
         <div className="flex items-center text-base">
           <FaUserFriends className="mr-2 text-gray-100" />
           <span className="text-gray-100">
@@ -263,7 +263,7 @@ function RoomCard({ room }) {
           <span className="text-gray-100">{room.roomType}</span>
         </div>
       </div>
-      <div className="absolute text-2xl font-bold text-white bottom-6 right-6">
+      <div className="absolute bottom-6 right-6 text-2xl font-bold text-white">
         ${room.price}
         <span className="text-base font-semibold text-gray-200">/ night</span>
       </div>
